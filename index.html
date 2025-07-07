@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Delicias Ovinos - Carnes Premium de Cordero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-bg-texture"></div>
+        <h1>Las Delicias Ovinos</h1>
+        <p>Tradición y Calidad en Cada Corte</p>
+    </header>
+
+    <nav>
+        <a href="#about">Nosotros</a>
+        <a href="#products">Nuestros Cortes</a>
+        <a href="tienda.html" class="btn-nav-shop">Tienda</a> <a href="#gallery">Galería</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>Sobre Nosotros</h2>
+            
+            <p>Nuestra misión es llevar a su mesa los mejores cortes, despostados con maestría y listos para cocinar. ¡Descubra el verdadero sabor del campo en cada bocado!</p>
+        </section>
+
+        <section id="products">
+            <h2>Nuestros Cortes Premium</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <img src="../LD/imagenes/cortes/paleta.jpg" alt="Paleta de Cordero">
+                    <h3>Paleta de Cordero</h3>
+                    <p>Ideal para asados lentos o guisos. Carne tierna y jugosa.</p>
+                    <span class="price">$18000/kg</span>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+                <div class="product-item">
+                    <img src="../LD/imagenes/cortes/costi.jpg" alt="Costillar de Cordero">
+                    <h3>Costillar de Cordero</h3>
+                    <p>El corte estrella para los amantes del buen cordero. Sabor inigualable.</p>
+                    <span class="price">$20.000/kg</span>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+                <div class="product-item">
+                    <img src="../LD/imagenes/cortes/cuarto.jpg" alt="cuarto de Cordero">
+                    <h3>Cuarto de Cordero</h3>
+                    <p>Perfecto para la parrilla o al horno. Un corte clásico y muy versátil.</p>
+                    <span class="price">$12.000/kg</span>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+                <div class="product-item">
+                    <img src="../LD/imagenes/cortes/carre.jpg" alt="Carré de Cordero">
+                    <h3>Carré de Cordero</h3>
+                    <p>Exquisito y elegante, perfecto para recetas gourmet.</p>
+                    <span class="price">$25000/kg</span>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+                
+            </section>
+
+        <section id="another-gallery">
+            <h2>Nuestras Cabañas - Cría y Cuidado</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide" id="carouselSlide2">
+                    <img src="../LD/imagenes/cabañas/cabaña1.jpeg" alt="Cabaña 1 - Vista general">
+                    <img src="../LD/imagenes/cabañas/cabaña2.jpeg" alt="Cabaña 2 - Cordero joven">
+                    <img src="../LD/imagenes/cabañas/cabaña3.jpeg" alt="Cabaña 3 - Alimentación">
+                    <img src="../LD/imagenes/cabañas/cabaña4.jpeg" alt="Cabaña 4 - Pastoreo">
+                    <img src="../LD/imagenes/cabañas/cabaña5.jpeg" alt="Cabaña 5 - Interior">
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide2(-1)">❮</button>
+                <button class="carousel-btn next" onclick="moveSlide2(1)">❯</button>
+            </div>
+            <p style="text-align: center; font-style: italic; color: #555;">Conoce el origen de la calidad que llega a tu mesa.</p>
+        </section>
+        <section id="gallery">
+            <h2>Momentos Ovinos - Nuestra Galería</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide" id="carouselSlide">
+                    <img src="../LD/imagenes/momentos ovinos/descarga 0.jpeg" alt="Cordero a la Cruz">
+                    <img src="../LD/imagenes/momentos ovinos/descarga 1.jpeg" alt="Cortes Frescos">
+                    <img src="../LD/imagenes/momentos ovinos/descarga 2.jpeg" alt="Familia Disfrutando">
+                    <img src="../LD/imagenes/momentos ovinos/descarga 3.jpeg" alt="Parrillada de Cordero">
+                    <img src="../LD/imagenes/momentos ovinos/descarga5.jpeg" alt="Parrillada de Cordero ">
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+            </div>
+            <p style="text-align: center; font-style: italic; color: #555;">Explora la calidad y la versatilidad de nuestros productos.</p>
+        </section>
+
+        <section id="newsletter" class="newsletter-form">
+            <h2>Suscríbete a Nuestro Newsletter</h2>
+            <p>Sé el primero en enterarte de nuestras ofertas especiales, nuevos cortes y recetas exclusivas de cordero. ¡No te lo pierdas!</p>
+            <form action="#" method="POST">
+                <label for="name" style="display: none;">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+
+                <label for="email-newsletter" style="display: none;">Email:</label>
+                <input type="email" id="email-newsletter" name="email" placeholder="Tu Email" required>
+                <button type="submit">¡Quiero Suscribirme!</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contáctanos</h2>
+            <p style="text-align: center;">¿Tienes alguna consulta o quieres hacer un pedido especial? ¡Estamos aquí para ayudarte!</p>
+            <p style="text-align: center;">Envíanos un mensaje o visítanos en nuestra tienda.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <p><strong>Teléfono:</strong> +5491112345678</p>
+                <p><strong>Email:</strong> info@lasdeliciasovinos.com</p>
+                <p><strong>Dirección:</strong> Chascomus, Buenos Aires, Argentina.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11509.994716632395!2d-57.864167453807895!3d-35.67847684913067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sTemplo%20budista!5e1!3m2!1ses!2sar!4v1751909049645!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Las Delicias Ovinos. Todos los derechos reservados.</p>
+        <p>Calidad y Tradición en tu Mesa</p>
+        <div class="social-links">
+            <a href="#" target="_blank">🛒</a> <a href="#" target="_blank">📸</a> <a href="#" target="_blank">📘</a> <a href="#" target="_blank">📧</a>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica del Carrusel 1 (Momentos Ovinos)
+        const carouselSlide = document.getElementById('carouselSlide');
+        const images = carouselSlide.querySelectorAll('img');
+        let currentIndex = 0;
+        const totalImages = images.length;
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            } else if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+
+            carouselSlide.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+
+        // Lógica del Carrusel 2 (Nuestras Cabañas)
+        const carouselSlide2 = document.getElementById('carouselSlide2');
+        const images2 = carouselSlide2.querySelectorAll('img');
+        let currentIndex2 = 0;
+        const totalImages2 = images2.length;
+
+        function moveSlide2(direction) {
+            currentIndex2 += direction;
+
+            if (currentIndex2 < 0) {
+                currentIndex2 = totalImages2 - 1;
+            } else if (currentIndex2 >= totalImages2) {
+                currentIndex2 = 0;
+            }
+
+            carouselSlide2.style.transform = `translateX(${-currentIndex2 * 100}%)`;
+        }
+
+        // Auto-play de los carruseles (opcional)
+        // Puedes duplicar esta sección para cada carrusel si quieres que se auto-reproduzcan
+        // setInterval(() => {
+        //     moveSlide(1); // Para el primer carrusel
+        // }, 5000);
+        // setInterval(() => {
+        //     moveSlide2(1); // Para el segundo carrusel
+        // }, 5000);
+    </script>
+</body>
+</html>
