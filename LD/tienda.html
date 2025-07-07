@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Las Delicias Ovinos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la página de Tienda (puedes moverlos a style.css si prefieres) */
+        #shop-content {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        #shop-content h2 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center;
+            align-items: start; /* Alinea los items en la parte superior de su celda */
+        }
+
+        .shop-item {
+            background-color: var(--light-text-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex; /* Usar flexbox para el contenido interno */
+            flex-direction: column;
+            justify-content: space-between; /* Empuja el footer y el precio/compra al final */
+        }
+
+        .shop-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .shop-item img {
+            width: 100%;
+            height: 200px; /* Altura fija para las imágenes de la tienda */
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .shop-item h3 {
+            font-size: 1.6em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            padding: 0 15px;
+        }
+
+        .shop-item p {
+            color: var(--dark-text-color);
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            padding: 0 15px;
+            flex-grow: 1; /* Permite que el párrafo crezca y empuje el resto hacia abajo */
+        }
+
+        .shop-item .price {
+            font-size: 1.8em;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 15px; /* Espacio antes del selector de cantidad */
+            display: block;
+        }
+
+        /* Estilos para el selector de cantidad */
+        .quantity-selector {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Espacio entre el label, select y el precio */
+            padding: 0 15px; /* Para que no se pegue a los bordes */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        }
+
+        .quantity-selector label {
+            font-weight: bold;
+            color: var(--dark-text-color);
+            white-space: nowrap; /* Evita que el texto de la etiqueta se rompa */
+        }
+
+        .quantity-selector select {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            color: var(--dark-text-color);
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .shop-item .btn-whatsapp-buy {
+            display: inline-block;
+            background-color: var(--accent-color); /* Un color para el botón de compra */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: auto; /* Empuja el botón a la parte inferior del shop-item */
+            margin: 0 15px 15px 15px; /* Margen para el botón */
+        }
+
+        .shop-item .btn-whatsapp-buy:hover {
+            background-color: #e04a00; /* Un tono más oscuro */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .shop-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        @media (max-width: 480px) {
+            .shop-grid {
+                grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+            }
+            .shop-item img {
+                height: 180px;
+            }
+            #shop-content h2 {
+                font-size: 2em;
+            }
+            .quantity-selector {
+                flex-direction: column; /* Apila elementos en pantallas muy pequeñas */
+                gap: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-bg-texture"></div>
+        <h1>Las Delicias Ovinos</h1>
+        <p>Tu Mejor Elección en Cortes de Cordero</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#products">Nuestros Cortes (Inicio)</a>
+        <a href="tienda.html" class="btn-nav-shop">Tienda</a>
+        <a href="index.html#gallery">Galería</a>
+        <a href="index.html#newsletter">Newsletter</a>
+        <a href="index.html#contact">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <section id="shop-content">
+            <h2>Nuestra Tienda Online</h2>
+            <p>Descubre nuestra selección completa de cortes de cordero premium, disponibles para envío o retiro.</p>
+
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="../LD/imagenes/cortes/paleta.jpg" alt="Paleta de Cordero">
+                    <h3>Paleta de Cordero (deshuesada)</h3>
+                    <p>Ideal para asados lentos o estofados. Carne tierna y jugosa, lista para preparar.</p>
+                    <span class="price">$18.000 / kg</span>
+                    <div class="quantity-selector">
+                        <label for="paleta-qty">Cantidad:</label>
+                        <select id="paleta-qty" data-product-name="Paleta de Cordero">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                        </select>
+                    </div>
+                    <button class="btn-whatsapp-buy" onclick="sendWhatsAppOrder(this)">Comprar por WhatsApp</button>
+                </div>
+
+                <div class="shop-item">
+                    <img src="../LD/imagenes/cortes/costi.jpg" alt="Costillar de Cordero">
+                    <h3>Costillar de Cordero Entero</h3>
+                    <p>El corte clásico para la parrilla. Gran sabor y textura, perfecto para compartir.</p>
+                    <span class="price">$20.000 / kg</span>
+                    <div class="quantity-selector">
+                        <label for="costillar-qty">Cantidad:</label>
+                        <select id="costillar-qty" data-product-name="Costillar de Cordero">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                        </select>
+                    </div>
+                    <button class="btn-whatsapp-buy" onclick="sendWhatsAppOrder(this)">Comprar por WhatsApp</button>
+                </div>
+
+                <div class="shop-item">
+                    <img src="../LD/imagenes/cortes/cuarto.jpg" alt="Cuarto de Cordero">
+                    <h3>Cuarto de Cordero (pierna y muslo)</h3>
+                    <p>Un corte versátil, excelente para el horno o la cacerola. Rinde para varias porciones.</p>
+                    <span class="price">$12.000 / kg</span>
+                    <div class="quantity-selector">
+                        <label for="cuarto-qty">Cantidad:</label>
+                        <select id="cuarto-qty" data-product-name="Cuarto de Cordero">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                        </select>
+                    </div>
+                    <button class="btn-whatsapp-buy" onclick="sendWhatsAppOrder(this)">Comprar por WhatsApp</button>
+                </div>
+
+                <div class="shop-item">
+                    <img src="../LD/imagenes/cortes/carre.jpg" alt="Carré de Cordero">
+                    <h3>Carré de Cordero (con hueso)</h3>
+                    <p>El corte más elegante y sabroso, ideal para platos gourmet. Presentación premium.</p>
+                    <span class="price">$25.000 / kg</span>
+                    <div class="quantity-selector">
+                        <label for="carre-qty">Cantidad:</label>
+                        <select id="carre-qty" data-product-name="Carré de Cordero">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                        </select>
+                    </div>
+                    <button class="btn-whatsapp-buy" onclick="sendWhatsAppOrder(this)">Comprar por WhatsApp</button>
+                    </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Las Delicias Ovinos. Todos los derechos reservados.</p>
+        <p>Calidad y Tradición en tu Mesa</p>
+        <div class="social-links">
+            <a href="#" target="_blank">🛒</a> <a href="#" target="_blank">📸</a> <a href="#" target="_blank">📘</a> <a href="#" target="_blank">📧</a>
+        </div>
+    </footer>
+
+    <script>
+        // Función para enviar el pedido por WhatsApp
+        function sendWhatsAppOrder(buttonElement) {
+            const phoneNumber = '+54 9 2241 57-3592'; // Reemplaza con tu número de WhatsApp real
+
+            // Encontrar el shop-item padre para obtener la información del producto
+            const shopItem = buttonElement.closest('.shop-item');
+
+            // Obtener el nombre del producto de su atributo data-product-name en el select
+            const selectElement = shopItem.querySelector('select');
+            const productName = selectElement.dataset.productName;
+            const quantity = selectElement.value; // Obtener la cantidad seleccionada
+
+            // Construir el mensaje
+            const message = `¡Hola! Me gustaría comprar ${quantity} unidad(es) de ${productName}. Por favor, confírmenme el precio y cómo puedo hacer el pedido.`;
+
+            // Codificar el mensaje para la URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Crear la URL de WhatsApp
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+            // Abrir WhatsApp en una nueva pestaña
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
